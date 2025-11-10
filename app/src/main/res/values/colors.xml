@@ -4,5 +4,6 @@
     <color name="white">#FFFFFFFF</color>
     <color name="background">#FFFEF6EF</color>
     <color name="rectangle">#FFFCE2CE</color>
+    <color name="login_big_text">#FF553922</color>
 
 </resources>
