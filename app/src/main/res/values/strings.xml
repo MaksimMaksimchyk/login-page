@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">login-page</string>
     <string name="login_header">Login</string>
+    <string name="young_man_descrition">Young man sitting in fron of laptop</string>
 </resources>
