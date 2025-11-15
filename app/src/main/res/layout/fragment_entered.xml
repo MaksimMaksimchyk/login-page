@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".MainActivity">
+
+
+    <View
+        android:id="@+id/rounded_rectangle_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@drawable/rounded_rectangle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.38"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_first"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="82dp" />
+
+    <TextView
+        android:id="@+id/login_header"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:fontFamily="@font/lufga_bold"
+        android:text="Inside"
+        android:textColor="@color/login_big_text"
+        android:textSize="64sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/guideline_first" />
+
+    <ImageView
+        android:id="@+id/login_image"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_marginTop="18dp"
+        android:contentDescription="@string/young_man_descrition"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/guideline_first"
+        app:srcCompat="@drawable/sticker_first" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_marginTop="12dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/lufga_bold"
+        android:text="You have successfully logged into some application."
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/login_image" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_second"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.8169" />
+
+    <Button
+        android:id="@+id/logout_button"
+        style="@style/MyButton"
+        android:layout_width="match_parent"
+        android:layout_height="53dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="25dp"
+        android:fontFamily="@font/rubik_semi_bold"
+        android:text="Log Out"
+        android:textColor="@color/login_button_text"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/guideline_second" />
+
+    <ImageView
+        android:id="@+id/content_image"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:contentDescription="@string/young_man_descrition"
+        app:layout_constraintBottom_toTopOf="@id/logout_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView"
+        app:srcCompat="@drawable/sticker_second" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

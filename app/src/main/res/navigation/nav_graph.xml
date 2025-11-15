@@ -13,6 +13,9 @@
         <action
             android:id="@+id/action_loginFragment_to_signUpFragment"
             app:destination="@id/signUpFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_enteredFragment"
+            app:destination="@id/enteredFragment" />
     </fragment>
     <fragment
         android:id="@+id/signUpFragment"
@@ -21,6 +24,15 @@
         android:label="SignUpFragment" >
         <action
             android:id="@+id/action_signUpFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/enteredFragment"
+        android:name="com.example.login_page.EnteredFragment"
+        tools:layout="@layout/fragment_entered"
+        android:label="EnteredFragment" >
+        <action
+            android:id="@+id/action_enteredFragment_to_loginFragment"
             app:destination="@id/loginFragment" />
     </fragment>
 </navigation>

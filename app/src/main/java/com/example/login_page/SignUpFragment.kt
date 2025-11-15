@@ -2,9 +2,12 @@ package com.example.login_page
 
 import android.os.Bundle
 import android.view.View
+import android.widget.Button
 import android.widget.EditText
 import android.widget.FrameLayout
+import android.widget.Toast
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 
 class SignUpFragment : Fragment(R.layout.fragment_sign_up) {
 
@@ -43,6 +46,15 @@ class SignUpFragment : Fragment(R.layout.fragment_sign_up) {
                 phoneHintFrame.visibility = View.VISIBLE
             } else phoneHintFrame.visibility = View.GONE
         }
+
+
+        //Кнопка регистрации
+        val regButton: Button = view.findViewById<Button>(R.id.registration_button)
+        regButton.setOnClickListener {
+            Toast.makeText(requireContext(), "You have registered successfully!", Toast.LENGTH_LONG).show()
+            findNavController().navigate(R.id.action_signUpFragment_to_loginFragment)
+        }
+
     }
 
 }

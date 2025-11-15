@@ -2,6 +2,7 @@ package com.example.login_page
 
 import android.os.Bundle
 import android.view.View
+import android.widget.Button
 import android.widget.EditText
 import android.widget.FrameLayout
 import android.widget.TextView
@@ -42,6 +43,10 @@ class LoginFragment : Fragment(R.layout.fragment_login) {
             findNavController().navigate(R.id.action_loginFragment_to_signUpFragment)
         }
 
+        val loginButton: Button = view.findViewById<Button>(R.id.login_button)
+        loginButton.setOnClickListener {
+            findNavController().navigate(R.id.action_loginFragment_to_enteredFragment)
+        }
 
     }
 
