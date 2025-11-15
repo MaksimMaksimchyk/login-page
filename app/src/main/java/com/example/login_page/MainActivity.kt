@@ -1,6 +1,9 @@
 package com.example.login_page
 
 import android.os.Bundle
+import android.view.View
+import android.widget.EditText
+import android.widget.FrameLayout
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -16,5 +19,20 @@ class MainActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, 0, systemBars.right, systemBars.bottom)
             insets
         }
+
+        //Скрытие всплывающих подсказок
+        val emailHintFrame: FrameLayout = findViewById<FrameLayout>(R.id.email_hint_frame)
+        emailHintFrame.visibility = View.GONE
+
+        //Показать всплывающию подсказку при начале ввода
+        val editTextTextEmailAddress: EditText =
+            findViewById<EditText>(R.id.editTextTextEmailAddress)
+        editTextTextEmailAddress.onFocusChangeListener = View.OnFocusChangeListener { _, hasFocus ->
+            if (hasFocus) {
+                emailHintFrame.visibility = View.VISIBLE
+            } else emailHintFrame.visibility = View.GONE
+        }
+
+
     }
 }

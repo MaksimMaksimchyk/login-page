@@ -69,17 +69,23 @@
             android:id="@+id/editTextTextEmailAddress"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:autofillHints="email"
             android:background="@android:color/transparent"
             android:drawableStart="@drawable/mail"
             android:drawablePadding="12dp"
             android:hint="Enter your email"
+            android:imeOptions="actionNext"
+            android:importantForAutofill="yes"
+            android:inputType="textEmailAddress"
+            android:maxLines="1"
             android:paddingStart="31dp"
-            android:textColor="@color/hint_gmail_text"
+            android:textColor="@color/black"
             android:textColorHint="@color/hint_gmail_text"
             android:textSize="16sp" />
     </FrameLayout>
 
     <FrameLayout
+        android:id="@+id/email_hint_frame"
         android:layout_width="67dp"
         android:layout_height="22dp"
         android:layout_marginStart="38dp"
@@ -89,6 +95,7 @@
         app:layout_constraintTop_toTopOf="@id/email_main_frame">
 
         <TextView
+            android:id="@+id/email_hint_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -96,7 +103,39 @@
             android:textColor="@color/hint_gmail_upper_text"
             android:textSize="16sp"
             android:textStyle="bold" />
+    </FrameLayout>
 
+
+
+    <FrameLayout
+        android:id="@+id/password_main_frame"
+        android:layout_width="0dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="25dp"
+        android:background="@drawable/edit_text_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/email_main_frame">
+
+        <EditText
+            android:id="@+id/editTextPassword"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:autofillHints="email"
+            android:background="@android:color/transparent"
+            android:drawableStart="@drawable/mail"
+            android:drawablePadding="12dp"
+            android:hint="Enter your password"
+            android:imeOptions="actionDone"
+            android:importantForAutofill="yes"
+            android:inputType="textEmailAddress"
+            android:maxLines="1"
+            android:paddingStart="31dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/hint_gmail_text"
+            android:textSize="16sp" />
     </FrameLayout>
 
 
