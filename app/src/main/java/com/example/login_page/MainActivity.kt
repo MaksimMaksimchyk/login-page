@@ -23,8 +23,10 @@ class MainActivity : AppCompatActivity() {
         //Скрытие всплывающих подсказок
         val emailHintFrame: FrameLayout = findViewById<FrameLayout>(R.id.email_hint_frame)
         emailHintFrame.visibility = View.GONE
+        val passwordHintFrame: FrameLayout = findViewById<FrameLayout>(R.id.password_hint_frame)
+        passwordHintFrame.visibility = View.GONE
 
-        //Показать всплывающию подсказку при начале ввода
+        //Показать всплывающую подсказку при начале ввода
         val editTextTextEmailAddress: EditText =
             findViewById<EditText>(R.id.editTextTextEmailAddress)
         editTextTextEmailAddress.onFocusChangeListener = View.OnFocusChangeListener { _, hasFocus ->
@@ -32,6 +34,16 @@ class MainActivity : AppCompatActivity() {
                 emailHintFrame.visibility = View.VISIBLE
             } else emailHintFrame.visibility = View.GONE
         }
+
+        val editTextPassword: EditText = findViewById<EditText>(R.id.editTextPassword)
+        editTextPassword.onFocusChangeListener = View.OnFocusChangeListener { _, hasFocus ->
+            if (hasFocus) {
+                passwordHintFrame.visibility = View.VISIBLE
+            } else passwordHintFrame.visibility = View.GONE
+
+        }
+
+
 
 
     }

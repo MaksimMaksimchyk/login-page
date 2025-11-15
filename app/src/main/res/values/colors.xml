@@ -7,7 +7,10 @@
     <color name="login_big_text">#FF553922</color>
     <color name="hint_gmail_text">#FF9E9E9E</color>
     <color name="hint_gmail_upper_text">#FF757575</color>
-
+    <color name="forgot_text">#FF616161</color>
+    <color name="login_button_text">#FF92613A</color>
+    <color name="or_text">#66553922</color>
+    <color name="sign_up_text">#FFC3824E</color>
 
 
 
