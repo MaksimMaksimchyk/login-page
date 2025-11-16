@@ -1,6 +1,9 @@
 package com.example.login_page
 
 import android.os.Bundle
+import android.view.View
+import android.widget.EditText
+import android.widget.FrameLayout
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -13,8 +16,14 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
+            v.setPadding(systemBars.left, 0, systemBars.right, systemBars.bottom)
             insets
         }
+
+
+
+
+
+
     }
 }
